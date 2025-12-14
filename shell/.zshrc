@@ -10,9 +10,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Resaltado de sintaxis (verde si está bien, rojo si está mal)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# --- Starship (El prompt bonito) ---
-eval "$(starship init zsh)"
-
 # --- Alias (Atajos útiles) ---
 alias ll='ls -l'
 alias la='ls -A'
@@ -51,3 +48,5 @@ source /usr/share/fzf/completion.zsh
 # Ctrl+T buscará archivos
 
 fastfetch
+
+eval "$(starship init zsh)"
