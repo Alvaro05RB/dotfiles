@@ -1,0 +1,7 @@
+auto-cpufreq
+jdk-temurin
+nordic-theme-git
+protonup-qt
+sddm-sugar-dark
+yay-bin
+yay-bin-debug
