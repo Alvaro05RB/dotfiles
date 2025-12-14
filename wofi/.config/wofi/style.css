@@ -1,0 +1,41 @@
+window {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14pt;
+    background-color: #2e3440; /* Nord Dark - Fondo de la ventana */
+    color: #d8dee9; /* Color de texto general (Nord Frost) */
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#input {
+    background-color: #4c566a; /* Nord Grey - Fondo de la caja de búsqueda */
+    color: #eceff4; /* Nord Light - Color del texto que escribes */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#entry { /* <--- ¡AÑADE O MODIFICA ESTO! */
+    color: #d8dee9; /* Texto claro para todas las entradas */
+    background-color: transparent; /* Fondo transparente para no oscurecer la entrada */
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#outer-box {
+    padding: 20px;
+}
+
+#text {
+    padding: 8px;
+}
+
+#entry:selected {
+    background-color: #88c0d0; /* Nord Blue (Highlight) */
+}
+
+#entry:selected #text {
+    color: #2e3440; /* Texto oscuro en la opción seleccionada */
+}

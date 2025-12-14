@@ -1,0 +1,131 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modularity": true,
+  "height": 40,
+  "spacing": 5,
+
+  // --- ORDEN DE LOS MÓDULOS ---
+  "modules-left": [
+    "custom/date",
+    "cpu",
+    "memory"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "temperature",
+    "network#ethernet",
+    "network#wifi",
+    "pulseaudio#microphone",
+    "pulseaudio",
+    "battery",
+    "tray"
+  ],
+
+  // --- CONFIGURACIÓN DE MÓDULOS ---
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "urgent": "",
+      "empty": ""
+    },
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "on-click": "activate"
+  },
+
+  // Añadido icono y formato CPU
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": false
+  },
+
+  // Añadido icono y formato RAM
+  "memory": {
+    "format": " {}%",
+    "tooltip": false
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", ""]
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " {volume}%",
+    "tooltip": true,
+    "scroll-step": 1,
+    "format-icons": {
+        "default": ["", ""]
+    },
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol --tab=3"
+  },
+
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": " ",
+    "on-click": "pamixer --default-source -t",
+    "on-click-right": "pavucontrol --tab=4",
+    "tooltip-format": "{source_desc} // {source_volume}%"
+  },
+
+  "network#ethernet": {
+    "interface": "enp64s0",
+    "format-ethernet": " {ifname}",
+    "tooltip-format": "{ifname}\nIP: {ipaddr}",
+    "format-disconnected": "",
+    "format": "{ifname} {icon}"
+  },
+
+  "network#wifi": {
+    "interface": "wlp63s0",
+    "format-icons": {
+      "wifi": ""
+    },
+    "format-wifi": "{icon} {essid}",
+    "tooltip-format": "IP: {ipaddr}\nSignal: {signalStrength}%",
+    "format-disconnected": "",
+    "format": "{ifname} {icon}"
+  },
+
+  "battery": {
+    "states": {
+      "good": 90,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-full": "",
+    "format-icons": {
+      "charging": "",
+      "default": ["", "", "", "", ""]
+    }
+  },
+
+  "tray": {
+    "spacing": 10
+  },
+
+  "custom/date": {
+    "format": " {}",
+    "tooltip-format": "{}",
+    // Forzamos inglés con LC_TIME y usamos %A para el día completo
+    "exec": "LC_TIME=en_US.UTF-8 date '+%A %d/%m %H:%M'", 
+    "interval": 60
+  }
+}

@@ -1,0 +1,82 @@
+format = """
+[](nopaint)\
+$os\
+$username\
+[](bg:yellow fg:nopaint)\
+$directory\
+[](fg:yellow bg:blue)\
+$git_branch\
+$git_status\
+[](fg:blue bg:green)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+[](fg:green bg:blue)\
+$docker_context\
+[](fg:blue)\
+"""
+
+# Desactivar el salto de línea
+[line_break]
+disabled = true
+
+# Icono del SO
+[os]
+style = "bg:nopaint fg:blue"
+disabled = false
+
+[os.symbols]
+Arch = " "
+
+[username]
+show_always = true
+style_user = "bg:nopaint fg:white"
+style_root = "bg:nopaint fg:red"
+format = '[$user ]($style)'
+
+[directory]
+style = "bg:yellow fg:black"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:blue"
+format = '[[ $symbol $branch ](fg:black bg:blue)]($style)'
+
+[git_status]
+style = "bg:blue"
+format = '[[($all_status$ahead_behind )](fg:black bg:blue)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol ($version) ](fg:black bg:green)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol ($version) ](fg:black bg:green)]($style)'
+
+# Colores personalizados (Palette Nord simplificada)
+[palettes.nord]
+dark_blue = "#2E3440"
+blue = "#81A1C1"
+teal = "#88C0D0"
+red = "#BF616A"
+orange = "#D08770"
+green = "#A3BE8C"
+yellow = "#EBCB8B"
+purple = "#B48EAD"
+gray = "#4C566A"
+black = "#000000"
+white = "#D8DEE9"
+nopaint = "#2E3440" # Coincide con el fondo de Kitty

@@ -1,0 +1,149 @@
+/* Nord Color Scheme Base */
+@define-color base00 #2E3440; /* Background */
+@define-color base03 #4C566A; /* Module Background */
+@define-color base05 #D8DEE9; /* Main Text */
+@define-color base0C #A3BE8C; /* Green (CPU, RAM) */
+@define-color base0A #EBCB8B; /* Yellow (Network) */
+@define-color base0B #BF616A; /* Red (Low Battery, Alert) */
+@define-color base0D #88C0D0; /* Blue (Active, Workspace) */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* Main Waybar container */
+window#waybar {
+    background-color: @base00;
+    color: @base05;
+    min-height: 30px;
+    /* CAMBIO: Añadido padding lateral para que nada toque los bordes de la pantalla */
+    padding: 0 10px; 
+}
+
+/* --- Modules (General Styling) --- */
+/* CAMBIO: Añadido #custom-date a esta lista para que tenga fondo y forma */
+#workspaces, #clock, #custom-date, #pulseaudio, #network, #cpu, #memory, #tray, #temperature {
+    /* Vertical Centering: 8.5px */
+    padding: 8.5px 15px;
+    margin: 0 4px;
+    background-color: @base03;
+    border-radius: 8px;
+    color: @base05;
+    min-width: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+/* CAMBIO: Estilo específico para la fecha (opcional, para darle color) */
+#custom-date {
+    color: @base0D; /* Azul Nord */
+    font-weight: bold;
+}
+
+/* --- Battery Module --- */
+#battery {
+    padding: 0 11px 0 8px;
+    margin: 0 4px;
+    background-color: @base03;
+    border-radius: 8px;
+    color: @base05;
+    min-width: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+#pulseaudio-microphone {
+    /* Mantenemos un min-width base por estabilidad */
+    min-width: 35px;
+
+    /* SUMA TOTAL DE PADDING HORIZONTAL: 10 + 10 = 20px */
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    /* Centrado vertical (ajusta según tu barra) */
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    /* Márgenes externos */
+    margin-left: -4px;
+    margin-right: 4px;
+    
+    border-radius: 8px;
+    transition: all 0.2s; /* Transición rápida para que no se note el cambio */
+    
+    /* --- AJUSTE PARA EL MICRO NORMAL () --- */
+    /* Juega con estos dos valores hasta centrar el micro abierto */
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    background-color: @base03;
+    color: @base0D;
+}
+
+/* 1. Botones Inactivos (Base) */
+#workspaces button {
+    /* Mantenemos lo de antes, pero bajamos un poco el padding general */
+    min-width: 20px;
+    
+    /* TRUCO: Si ves que los círculos normales también están descentrados,
+       juega con estos dos números.
+       El formato es: padding: [arriba] [derecha] [abajo] [izquierda] */
+    padding: 0 6px 0 4px; /* Un poco menos a la izquierda para compensar */
+    
+    margin: 0 2px;
+    color: @base04;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+/* 2. Botón ACTIVO (Corrección manual) */
+#workspaces button.active {
+    background-color: transparent;
+    color: @base0D;
+    border-bottom: 2px solid @base0D;
+    margin: 0 2px;
+    min-width: 20px;
+
+    /* --- AJUSTE FINO (Intento 3) --- */
+    /* Formato: Arriba | Derecha | Abajo | Izquierda */
+    
+    /* Probemos casi simétrico, pero con 1px de diferencia */
+    /* Antes probamos 8px/2px (muy extremo) */
+    padding: 0 7px 0 4px; 
+}
+
+#workspaces button:hover {
+    background-color: transparent;
+    color: @base0D;
+    border-bottom: 2px solid @base0D;
+}
+
+/* Alert/Warning State */
+#battery.warning {
+    background-color: @base0A; /* Yellow */
+    color: @base00;
+}
+
+#battery.critical {
+    background-color: @base0B; /* Red */
+    color: @base05;
+}
+
+/* Performance Indicators (Green Color) */
+#cpu, #memory, #temperature {
+    background-color: @base03;
+    color: @base0C;
+}
+
+/* Network/Audio Icons (Blue Color) */
+#network, #pulseaudio {
+    background-color: @base03;
+    color: @base0D;
+}
+
+/* Tray Icons */
+#tray {
+    background-color: @base03;
+}

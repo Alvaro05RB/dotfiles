@@ -1,0 +1,43 @@
+# Modo de escalado (fill, fit, center, tile)
+scaling=fill
+image=/usr/share/backgrounds/Lockscreen.png
+# --- Comportamiento ---
+ignore-empty-password
+show-failed-attempts
+daemonize
+
+# --- Tema Nord (Colores) ---
+# Fondo base (si la imagen falla)
+color=2E3440
+
+# Anillo (círculo exterior)
+ring-color=88C0D0
+ring-clear-color=EBCB8B
+ring-ver-color=A3BE8C
+ring-wrong-color=BF616A
+
+# Interior del círculo
+inside-color=2E3440
+inside-clear-color=2E3440
+inside-ver-color=2E3440
+inside-wrong-color=2E3440
+
+# Texto
+text-color=D8DEE9
+text-clear-color=EBCB8B
+text-ver-color=A3BE8C
+text-wrong-color=BF616A
+
+# Línea separadora
+line-color=3B4252
+line-clear-color=3B4252
+line-ver-color=3B4252
+line-wrong-color=3B4252
+
+# Teclas pulsadas (feedback visual)
+key-hl-color=88C0D0
+bs-hl-color=BF616A
+
+# Layout (texto indicador)
+layout-bg-color=2E3440
+layout-text-color=D8DEE9

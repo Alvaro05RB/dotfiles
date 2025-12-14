@@ -1,0 +1,29 @@
+/*
+ * Archivo: ~/.config/swaylock/style.css
+ * Tema: Nord Dark con Imagen de Fondo
+ */
+
+/* Estilo del Fondo de la Ventana Global */
+#window {
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+/* Fuente General */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16pt;
+}
+
+/* Indicador de Contraseña (Círculo) */
+#indicator {
+    border-radius: 100%;
+    background-color: #4c566a; 
+    border: 3px solid #88c0d0; 
+    padding: 30px; 
+}
+
+/* Estados y Texto */
+#indicator.verifying { background-color: #a3be8c; }
+#indicator.invalid { background-color: #bf616a; }
+#text { color: #d8dee9; }
