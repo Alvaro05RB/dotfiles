@@ -1,4 +1,3 @@
-alacritty
 alsa-firmware
 alsa-utils
 base
@@ -29,6 +28,7 @@ htop
 hyprland
 intellij-idea-community-edition
 kde-gtk-config
+kitty
 kvantum
 lib32-nvidia-utils
 lib32-vulkan-intel
@@ -88,6 +88,7 @@ wine
 wireplumber
 wl-clipboard
 wofi
+xdg-desktop-portal-hyprland
 xf86-input-synaptics
 xfce4-power-manager
 zoxide
