@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "modularity": true,
-  "height": 40,
+  "height": 20,
   "spacing": 5,
 
   // --- ORDEN DE LOS MÓDULOS ---
