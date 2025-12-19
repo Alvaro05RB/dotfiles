@@ -23,6 +23,17 @@ alias ls='ls --color=auto'
 # --- ALIAS DE UTILIDAD ---
 alias seeupdates='firefox https://archlinux.org/news/'
 
+# --- CARGO ALIAS
+alias cr='cargo run'
+alias cb='cargo build'
+alias cch='cargo check'
+alias cbr='cargo build --release'
+
+# --- CARGO FUNCTIONS
+cn() {
+    cargo new "$1" && cd "$1"
+}
+
 # --- MEJORAS ---
 
 # 1. Zoxide (Reemplazo inteligente de cd)

@@ -300,7 +300,14 @@ require('lazy').setup({
   -- normal autocommands events (`:help autocmd-events`).
   --
   -- Then, because we use the `opts` key (recommended), the configuration runs
+  --
   -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    config = true,
+    -- use opts = {} for setup with default configurations
+  },
 
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
