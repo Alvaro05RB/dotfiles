@@ -22,7 +22,7 @@ if [ -n "$SLURP_OUT" ]; then
     wl-copy < "$FILE"
 
     # 3. Notificar al usuario (con icono de la propia captura)
-    dunstify -u low -i "$FILE" "Captura Exitosa" "Área capturada y copiada al portapapeles."
+    dunstify -u low -i "$FILE" "Screenshot successful"
 else
-    dunstify -u low "Captura Cancelada" "Selección de área cancelada."
+    dunstify -u low "Screenshot cancelled"
 fi
