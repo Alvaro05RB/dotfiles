@@ -3,7 +3,6 @@
 @define-color base03 #4C566A; /* Module Background */
 @define-color base05 #D8DEE9; /* Main Text */
 @define-color base0C #A3BE8C; /* Green (CPU, RAM) */
-@define-color base0A #EBCB8B; /* Yellow (Network) */
 @define-color base0B #BF616A; /* Red (Low Battery, Alert) */
 @define-color base0D #88C0D0; /* Blue (Active, Workspace) */
 
@@ -26,7 +25,7 @@ window#waybar {
 
 /* --- Modules (General Styling) --- */
 /* CAMBIO: Añadido #custom-date a esta lista para que tenga fondo y forma */
-#workspaces, #clock, #custom-date, #pulseaudio, #network, #cpu, #memory, #tray, #temperature {
+#workspaces, #clock, #custom-date, #pulseaudio, #cpu, #memory, #tray, #temperature {
     /* Vertical Centering: 8.5px */
     padding: 8.5px 15px;
     margin: 0 4px;
@@ -41,17 +40,6 @@ window#waybar {
 #custom-date {
     color: @base0D; /* Azul Nord */
     font-weight: bold;
-}
-
-/* --- Battery Module --- */
-#battery {
-    padding: 0 11px 0 8px;
-    margin: 0 4px;
-    background-color: @base03;
-    border-radius: 8px;
-    color: @base05;
-    min-width: 15px;
-    transition: all 0.5s ease-in-out;
 }
 
 #pulseaudio-microphone {
@@ -90,7 +78,7 @@ window#waybar {
     /* TRUCO: Si ves que los círculos normales también están descentrados,
        juega con estos dos números.
        El formato es: padding: [arriba] [derecha] [abajo] [izquierda] */
-    padding: 0 6px 0 4px; /* Un poco menos a la izquierda para compensar */
+    padding: 0 7px 0 4px; /* Un poco menos a la izquierda para compensar */
     
     margin: 0 2px;
     color: @base04;
@@ -102,7 +90,6 @@ window#waybar {
 #workspaces button.active {
     background-color: transparent;
     color: @base0D;
-    border-bottom: 2px solid @base0D;
     margin: 0 2px;
     min-width: 20px;
 
@@ -138,7 +125,7 @@ window#waybar {
 }
 
 /* Network/Audio Icons (Blue Color) */
-#network, #pulseaudio {
+#pulseaudio {
     background-color: @base03;
     color: @base0D;
 }

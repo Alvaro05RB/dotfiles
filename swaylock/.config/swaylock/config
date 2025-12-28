@@ -1,6 +1,6 @@
 # Modo de escalado (fill, fit, center, tile)
 scaling=fill
-image=/usr/share/backgrounds/Lockscreen.png
+image=/home/pafu/Pictures/Lockscreen.png
 # --- Comportamiento ---
 ignore-empty-password
 show-failed-attempts
